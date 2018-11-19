@@ -262,6 +262,8 @@ public class DatabaseCreator {
                     type = "openedge";
                 } else if (dbUrl.matches("(?i).*informix.*")) {
                     type = "informix";
+                } else if (dbUrl.matches("(?i).*adaptive.*")) {
+                    type = "ase";
                 } else {
                     String msg = "Unsupported database: " + dbUrl +
                             ". Database will not be created automatically by the WSO2 Registry. " +
